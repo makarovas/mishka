@@ -1,0 +1,9 @@
+//@import "modules/list";
+
+$border-radius: 5px;
+
+.avatar {
+  filter: grayscale(100%);
+  border-radius: $border-radius;
+  color: red;
+}
