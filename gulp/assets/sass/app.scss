@@ -1,9 +1,44 @@
-//@import "modules/list";
+@import "modules/normalize";
+@import "modules/list";
+@import "modules/mixins";
+@import "modules/variables";
 
-$border-radius: 5px;
+/*GENERAL*/
 
-.avatar {
-  filter: grayscale(100%);
-  border-radius: $border-radius;
-  color: red;
+/*body*/
+
+
+@mixin heading {
+  font-family: "Open-Sans-Regular";
+  font-size: 53px;
+  letter-spacing: 57px;
+  font-weight: bold;
+  letter-spacing: normal;
 }
+
+@mixin flex-gorizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.header__nav {
+  @include flex-gorizontal ;
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 18px;
+    line-height: 27px;
+    font-family: OpenSans-Bold;
+    background-color: $bg-color-main;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+
