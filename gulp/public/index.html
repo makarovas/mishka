@@ -2,10 +2,11 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!--<meta name="viewport"-->
+  <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mishka</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
@@ -13,15 +14,31 @@
 <body>
 <!-- Header -->
 <header class="header container">
-  <nav>
-    <ul class="header__nav">
+  <nav class="header__nav">
+    <ul class="header__nav--ul">
       <li><a href="#">Каталог товаров</a></li>
       <li><a href="#">Вязание на заказ</a></li>
-      <li class="header__nav--logo"><a href="#"></a></li>
-      <li class="header__nav--search"><a href="#"></a></li>
-      <li class="header__nav--basket"><a href="#">Корзина: <span class="basket--empty">пока пуста</span></a></li>
+      <li class=""><a href="#"></a></li>
+      <li class="ul-basket"><a href="#">Корзина: <span class="basket-empty">пока пуста</span></a></li>
     </ul>
+    <div class="header__nav--logo">
+      <a href="#"></a>
+      <a href="#"><img src="img/mishka-logo-desktop.png" alt="Logo" height="72" width="149"></a>
+    </div>
   </nav>
+  <!--<nav class="header__nav-tablet">-->
+    <!--<ul class="header__nav-ul">-->
+      <!--<li>-->
+        <!--<div class="header__nav&#45;&#45;logo">-->
+          <!--<a href="#"></a>-->
+          <!--<a href="#"><img src="img/mishka-logo-desktop.png" alt="Logo" height="72" width="149"></a>-->
+        <!--</div>-->
+      <!--</li>-->
+      <!--<li><a href="#">Вязание на заказ</a></li>-->
+      <!--<li class=""><a href="#"></a></li>-->
+      <!--<li class="header__nav&#45;&#45;basket"><a href="#">Корзина: <span class="basket&#45;&#45;empty">пока пуста</span></a></li>-->
+    <!--</ul>-->
+  <!--</nav>-->
 </header>
 <section class="main container">
   <nav>

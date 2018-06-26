@@ -1,18 +1,51 @@
-@import "modules/normalize.css";
 @import "modules/fonts";
 @import "modules/list";
 @import "modules/mixins";
 @import "modules/variables";
-@import "modules/media";
+
+
 
 .container {
   width: 1150px;
   margin: 0 auto;
   padding: 0 50px;
+  background-color: transparent;
 }
 
 .header {
   @include header-font;
+  height: 90px;
+}
+
+.header__nav-ul {
+  @include flex-row;
+  align-content: center;
+  align-items: center;
+  :nth-child(2) {
+    width: 600px;
+  }
+}
+
+ul, ol {
+  padding: 0;
+  magin:0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header nav {
+  position: relative;
+  .header__nav--logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -74.5px;
+    margin-top: -36px;
+  }
 }
 
 
+@import "modules/media";

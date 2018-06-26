@@ -1,17 +1,36 @@
 @import "variables";
-@media (min-width: $desktop-width) {
+@import "mixins";
+
+@media only screen and (max-width: 768px) {
+
   .header {
-    max-width: 320px;
     height: 80px;
+  }
+
+  .container {
+    width: 320px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
+  .header__nav-ul {
+    visibility: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1150px) {
+  .container {
+    margin: 0 auto;
+    width: 768px;
+    padding: 0 50px;
+  }
+  .header__nav--logo {
+    left: 0%;
   }
 }
 
-@media (min-width: $tablet-width) {
 
-}
-
-@media (min-width: $mobile-width) {
-
-}
