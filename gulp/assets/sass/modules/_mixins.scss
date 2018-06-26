@@ -18,7 +18,7 @@
     font-weight: $weight;
   }
 }
-@mixin header__nav-font() {
+@mixin header-font() {
   font-family: "OpenSans-Bold", sans-serif;
   font-size: 17px;
   color: rgba(0, 0, 0, 1);
