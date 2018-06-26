@@ -3,7 +3,19 @@
 @import "modules/mixins";
 @import "modules/variables";
 
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.content-box-component {
+  box-sizing: content-box;
+}
 
 .container {
   width: 1150px;
@@ -12,28 +24,99 @@
   background-color: transparent;
 }
 
+a:visited {
+  color: #000000;
+}
+
 .header {
   @include header-font;
   height: 90px;
 }
 
-.header__nav-ul {
+.header__nav--ul {
   @include flex-row;
   align-content: center;
   align-items: center;
-  :nth-child(2) {
-    width: 600px;
+  position: relative;
+  :before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 1150px;
+    left: 0;
+    margin-left: -50px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    opacity: 0.1;
   }
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90px;
+  }
+
+}
+
+.header__nav--ul .ul__catalog {
+  min-width: 185px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.ul__knitting {
+  min-width: 520px;
+  padding-left: 35px;
+}
+
+.ul__search {
+  min-width: 86px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.header__nav--ul .ul-basket {
+  padding-left: 85px;
+  min-width: 316px;
+  position: relative;
+  border-top: none;
+  border-right: none;
+
+  img {
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -9px;
+  }
+}
+
+.ul__search--img {
+  opacity: 0.2;
+  width: 18px;
+  height: 19px;
 }
 
 ul, ol {
   padding: 0;
-  magin:0;
+  margin: 0;
   list-style: none;
 }
 
 a {
   text-decoration: none;
+}
+
+a:hover, svg:hover {
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
 }
 
 .header nav {
@@ -47,5 +130,92 @@ a {
   }
 }
 
+.main-wrap {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.main {
+  position: relative;
+  height: 756px;
+  background: url("../../public/img/hero-desktop.png") no-repeat center;
+}
+
+.main__services {
+  @include main__services-font;
+  @include flex-row;
+  height: 60px;
+  :nth-child(2) {
+    margin-right: 430px;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+}
+
+h1, h2 {
+  @include heading-font;
+}
+
+h1 {
+  padding-top: 102px;
+  width: 700px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.subjects-wrap {
+  position: relative;
+  @include main__subjects-item;
+  position: absolute;
+  height: 120px;
+  bottom: 0;
+  @include flex-row;
+}
+
+.main__subjects-zigzag {
+  position: absolute;
+  bottom: 0;
+  margin-left: -50px;
+
+}
+
+.main__subjects {
+  background-color: #63d1bb;
+  span {
+    display: block;
+    width: 175px;
+    margin-right: 275px;
+  }
+  img {
+    fill: #3bb09d;
+    opacity: 0.5;
+  }
+}
+
+.main__toys {
+  background-color: #56c3b2;
+  span {
+    display: block;
+    width: 175px;
+    margin-right: 255px;
+  }
+  img {
+    fill: #3bb09d;
+    opacity: 0.5;
+  }
+}
+
+.main__subjects, .main__toys {
+  padding: 0 35px;
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+  width: 525px;
+}
 
 @import "modules/media";

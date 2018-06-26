@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <!--<meta name="viewport"-->
-  <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mishka</title>
   <link rel="stylesheet" href="css/normalize.css">
@@ -16,46 +16,41 @@
 <header class="header container">
   <nav class="header__nav">
     <ul class="header__nav--ul">
-      <li><a href="#">Каталог товаров</a></li>
-      <li><a href="#">Вязание на заказ</a></li>
-      <li class=""><a href="#"></a></li>
-      <li class="ul-basket"><a href="#">Корзина: <span class="basket-empty">пока пуста</span></a></li>
+      <li class="ul__catalog"><a href="#">Каталог товаров</a></li>
+      <li class="ul__knitting"><a href="#">Вязание на заказ</a></li>
+      <li class="ul__search"><a href="#"><img class="ul__search--img" width="18" height="19" src="img/search.svg"
+                                              alt="search"></a></li>
+      <li class="ul-basket"><a href="#"><img src="img/basket.svg" height="18" width="21 " alt="basket"> Корзина: <span
+        class="basket-empty">пока пуста</span></a></li>
     </ul>
     <div class="header__nav--logo">
       <a href="#"></a>
-      <a href="#"><img src="img/mishka-logo-desktop.png" alt="Logo" height="72" width="149"></a>
+      <a href="#"><img src="img/logo.svg" alt="Logo" height="72" width="149"></a>
     </div>
   </nav>
-  <!--<nav class="header__nav-tablet">-->
-    <!--<ul class="header__nav-ul">-->
-      <!--<li>-->
-        <!--<div class="header__nav&#45;&#45;logo">-->
-          <!--<a href="#"></a>-->
-          <!--<a href="#"><img src="img/mishka-logo-desktop.png" alt="Logo" height="72" width="149"></a>-->
-        <!--</div>-->
-      <!--</li>-->
-      <!--<li><a href="#">Вязание на заказ</a></li>-->
-      <!--<li class=""><a href="#"></a></li>-->
-      <!--<li class="header__nav&#45;&#45;basket"><a href="#">Корзина: <span class="basket&#45;&#45;empty">пока пуста</span></a></li>-->
-    <!--</ul>-->
-  <!--</nav>-->
 </header>
-<section class="main container">
-  <nav>
-    <ul class="main__services">
-      <li><a href="#">Новые поступлентя</a></li>
-      <li><a href="#">Распродажа</a></li>
-      <li><a href="#">Бесплатная доставка по России</a></li>
-    </ul>
-  </nav>
-  <div class="main__heading-promo">
-    <div class="main__heading-promo__interior-items"></div>
-    <div class="main__heading-promo__kids-toys"></div>
-  </div>
-  <h1>Милые штуки ручной работы для дома</h1>
-  <div class="main__subjects">Предметы интерьера</div>
-  <div class="main__toys">Детские игрушки</div>
-</section>
+<div class="main-wrap">
+  <section class="main container ">
+    <nav>
+      <ul class="main__services">
+        <li><a href="#">Новые поступлентя</a></li>
+        <li><a href="#">Распродажа</a></li>
+        <li><a href="#">Бесплатная доставка по России</a></li>
+      </ul>
+    </nav>
+    <div class="main__heading-promo">
+      <div class="main__heading-promo__interior-items"></div>
+      <div class="main__heading-promo__kids-toys"></div>
+    </div>
+    <h1>Милые штуки ручной работы для дома</h1>
+    <div class="subjects-wrap">
+      <div class="main__subjects"><span>Предметы интерьера</span> <img src="img/interior.svg" width="41" height="62" alt="interior">
+      </div>
+      <div class="main__toys"><span>Детские игрушки</span><img src="img/toy-svg.svg" width="60" height="62" alt="interior"></div>
+      <div class="main__subjects-zigzag"><img src="img/zigzag-fill-desktop.svg" alt="zigzag"></div>
+    </div>
+  </section>
+</div>
 <section class="goods container">
   <h2 class="goods__heading">Вязанные коврики</h2>
   <div class="goods__card">

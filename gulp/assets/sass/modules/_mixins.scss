@@ -13,15 +13,15 @@
     url("#{$src}.woff") format("woff"), // standards
     url("#{$src}.ttf") format("truetype"), // Safari, Android, iOS
     url("#{$src}.svg##{$family}") format("svg"); // legacy iOS
-
     font-style: $style;
     font-weight: $weight;
   }
 }
+
 @mixin header-font() {
   font-family: "OpenSans-Bold", sans-serif;
   font-size: 17px;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   font-weight: bold;
   line-height: 1.412;
 }
@@ -29,7 +29,7 @@
 @mixin heading-font() {
   font-family: "OpenSans-Bold", sans-serif;
   font-size: 53px;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   font-weight: bold;
   line-height: 1.075;
 }
@@ -37,7 +37,7 @@
 @mixin main__services-font() {
   font-size: 15px;
   font-family: "OpenSans-Bold", sans-serif;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -45,14 +45,14 @@
 @mixin main__services--delivery-font() {
   font-size: 15px;
   font-family: "OpenSans-Regular", sans-serif;
-  color: rgba(68, 68, 68, 1);
+  color: #000000;
   line-height: 1.6;
 }
 
 @mixin main__subjects-item() {
   font-size: 20px;
   font-family: "Open-Sans-Bold", sans-serif;
-  color: rgba(255, 255, 255, 1);
+  color: #FFFFFF;
   font-weight: bold;
   line-height: 1.5;
 }
