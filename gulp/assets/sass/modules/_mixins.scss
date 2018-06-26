@@ -1,0 +1,97 @@
+//@import "../../../../public/css/fonts.css";
+//.logo {
+//  color: rgba(#000000, 100%);
+//  color: desaturate(#000000, 60%);
+//  color: lighten(#000000, 30%);
+//}
+//fonts
+@mixin font-face($family,$src,$style: normal,$weight: normal) {
+  @font-face {
+    font-family: $family;
+    src: url("#{$src}.eot"); // IE9 compat
+    src: url("#{$src}.eot?#iefix") format("embedded-opentype"), // IE8 and below
+    url("#{$src}.woff") format("woff"), // standards
+    url("#{$src}.ttf") format("truetype"), // Safari, Android, iOS
+    url("#{$src}.svg##{$family}") format("svg"); // legacy iOS
+
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+@mixin header__nav-font() {
+  font-family: "OpenSans-Bold", sans-serif;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: bold;
+  line-height: 1.412;
+}
+
+@mixin heading-font() {
+  font-family: "OpenSans-Bold", sans-serif;
+  font-size: 53px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: bold;
+  line-height: 1.075;
+}
+
+@mixin main__services-font() {
+  font-size: 15px;
+  font-family: "OpenSans-Bold", sans-serif;
+  color: rgba(0, 0, 0, 1);
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+@mixin main__services--delivery-font() {
+  font-size: 15px;
+  font-family: "OpenSans-Regular", sans-serif;
+  color: rgba(68, 68, 68, 1);
+  line-height: 1.6;
+}
+
+@mixin main__subjects-item() {
+  font-size: 20px;
+  font-family: "Open-Sans-Bold", sans-serif;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+@mixin about-us__advantage-item() {
+  font-family: "Open-Sans-Bold", sans-serif;
+  font-size: 20px;
+  letter-spacing: 57px;
+  font-weight: bold;
+  letter-spacing: normal;
+}
+
+@mixin table-font() {
+  font-size: 15px;
+  font-family: "OpenSans-Regular", sans-serif;
+  color: rgba(68, 68, 68, 1);
+  line-height: 1.333;
+}
+
+@mixin text-font() {
+  font-size: 17px;
+  font-family: "OpenSans-Regular", sans-serif;
+  color: rgba(68, 68, 68, 1);
+  line-height: 1.765;
+}
+
+@mixin button-font() {
+  font-size: 17px;
+  font-family: "OpenSans-Bold", sans-serif;
+  color: rgba(68, 68, 68, 1);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.176;
+}
+
+//grid
+
+@mixin flex-row() {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

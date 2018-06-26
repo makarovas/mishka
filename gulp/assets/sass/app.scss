@@ -1,44 +1,18 @@
-@import "modules/normalize";
+@import "modules/normalize.css";
+@import "modules/fonts";
 @import "modules/list";
 @import "modules/mixins";
 @import "modules/variables";
+@import "modules/media";
 
-/*GENERAL*/
-
-/*body*/
-
-
-@mixin heading {
-  font-family: "Open-Sans-Regular";
-  font-size: 53px;
-  letter-spacing: 57px;
-  font-weight: bold;
-  letter-spacing: normal;
+.container {
+  width: 1150px;
+  margin: 0 auto;
+  padding: 0 50px;
 }
 
-@mixin flex-gorizontal {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-}
-
-.header__nav {
-  @include flex-gorizontal ;
-}
-
-@media (max-width: 320px) {
-  body {
-    font-size: 18px;
-    line-height: 27px;
-    font-family: OpenSans-Bold;
-    background-color: $bg-color-main;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
+.header__nav li {
+  @include header__nav-font;
 }
 
 

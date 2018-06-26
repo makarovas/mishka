@@ -1,0 +1,17 @@
+@import "variables";
+@media (min-width: $desktop-width) {
+  .header {
+    max-width: 320px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $tablet-width) {
+
+}
+
+@media (min-width: $mobile-width) {
+
+}
