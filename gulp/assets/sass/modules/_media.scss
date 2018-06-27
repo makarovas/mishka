@@ -1,8 +1,39 @@
 @import "variables";
 @import "mixins";
 
-@media only screen and (max-width: 768px) {
+/*==========  Desktop First Method  ==========*/
 
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .container {
+    margin: 0 auto;
+    width: 768px;
+    padding: 0 50px;
+  }
+  .header__nav--logo {
+    left: 50px;
+  }
+
+  .main__subjects, .main__toys {
+    width: 334px;
+    padding: 0;
+    span {
+      margin: 0;
+    }
+
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  body {
+    min-width: 320px;
+  }
   .header {
     height: 80px;
   }
@@ -14,23 +45,112 @@
   }
 
   .header__nav--ul {
+    position: absolute;
     visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    z-index: 1;
+    li {
+      padding: 0;
+      width: 320px;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);;
+    }
+    :nth-child(1):before {
+      background-color: transparent;
+    }
+  }
+  .header__nav--logo {
+    visibility: hidden;
+  }
+  .header__nav--logo-mobile {
+    visibility: visible;
+    margin-top: auto;
+  }
+
+  .main {
+    position: relative;
+    height: 490px;
+    background: url("../../../public/img/hero-mobile.png") no-repeat center center;
+  }
+
+  .main__services {
+    display: none;
+  }
+  h1 {
+    padding: 74px 0 0 0;
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "OpenSans-Bold", sans-serif;
+    font-size: 27px;
+    color: #000000;
+    font-weight: bold;
+    line-height: 1.1;
+  }
+
+  .subjects-wrap {
+
+    height: 240px;
+    @include flex-column;
+    left: 0;
+  }
+  .main__subjects, .main__toys {
+    height: 120px;
+    width: 320px;
+    padding: 0 30px;
+
+    span {
+      margin: 0;
+    }
+
   }
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1150px) {
-  .container {
-    margin: 0 auto;
-    width: 768px;
-    padding: 0 50px;
-  }
-  .header__nav--logo {
-    left: 0%;
-  }
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
 }
 
 

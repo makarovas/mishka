@@ -3,7 +3,8 @@
 <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1150 23" style="enable-background:new 0 0 1150 23;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#E6E7E8;}
+	.st0{fill:red;}
+	<!-- #E6E7E8 -->
 </style>
 <g>
 	<path class="st0" d="M1150,23c-9,0-13.7-4.6-17.5-8.3c-3.4-3.3-5.9-5.7-11.2-5.7c-5.4,0-7.8,2.4-11.2,5.7

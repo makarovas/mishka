@@ -24,7 +24,7 @@ html {
   background-color: transparent;
 }
 
-a:visited {
+a, a:visited {
   color: #000000;
 }
 
@@ -38,7 +38,7 @@ a:visited {
   align-content: center;
   align-items: center;
   position: relative;
-  :before {
+  li:nth-child(1):before {
     content: '';
     position: absolute;
     height: 1px;
@@ -46,7 +46,7 @@ a:visited {
     left: 0;
     margin-left: -50px;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #000000;
     display: block;
     opacity: 0.1;
   }
@@ -59,8 +59,8 @@ a:visited {
 
 }
 
-.header__nav--ul .ul__catalog {
-  min-width: 185px;
+.ul__catalog {
+  width: 185px;
   border-left: none;
   border-top: none;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -68,12 +68,12 @@ a:visited {
 }
 
 .ul__knitting {
-  min-width: 520px;
+  width: 520px;
   padding-left: 35px;
 }
 
 .ul__search {
-  min-width: 86px;
+  width: 86px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   a {
@@ -82,9 +82,9 @@ a:visited {
   }
 }
 
-.header__nav--ul .ul-basket {
+.ul-basket {
   padding-left: 85px;
-  min-width: 316px;
+  width: 316px;
   position: relative;
   border-top: none;
   border-right: none;
@@ -119,15 +119,26 @@ a:hover, svg:hover {
   transition-timing-function: ease-in-out;
 }
 
-.header nav {
+.header__nav {
   position: relative;
-  .header__nav--logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -74.5px;
-    margin-top: -36px;
-  }
+
+}
+
+.header__nav--logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -74.5px;
+  margin-top: -36px;
+}
+
+.header__nav--logo-mobile {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -74.5px;
+  margin-top: -36px;
 }
 
 .main-wrap {
@@ -138,7 +149,7 @@ a:hover, svg:hover {
 .main {
   position: relative;
   height: 756px;
-  background: url("../../public/img/hero-desktop.png") no-repeat center;
+  background: url("../../public/img/hero-desktop.png") no-repeat center ;
 }
 
 .main__services {
@@ -168,7 +179,7 @@ h1 {
 }
 
 .subjects-wrap {
-  position: relative;
+
   @include main__subjects-item;
   position: absolute;
   height: 120px;
@@ -177,9 +188,13 @@ h1 {
 }
 
 .main__subjects-zigzag {
+
   position: absolute;
   bottom: 0;
-  margin-left: -50px;
+  left: 0;
+  path {
+    fill: #91c92f;
+  }
 
 }
 
@@ -191,7 +206,6 @@ h1 {
     margin-right: 275px;
   }
   img {
-    fill: #3bb09d;
     opacity: 0.5;
   }
 }
